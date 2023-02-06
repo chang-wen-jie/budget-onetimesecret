@@ -29,13 +29,13 @@
     <body class="antialiased">
         <div class="container">
             <div class="test">
-                <h1>Wachtwoord Delen</h1>
+                <h1>Bericht delen</h1>
                 <form method="POST" action="{{route('secrets.store')}}">
                     @csrf
                     <div class="form-group">
-                        <input class="form-control" name="data" placeholder="Te Delen Wachtwoord" required>
+                        <input class="form-control" name="data" placeholder="Voer hier de geheime informatie in" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Sleutelnummer Genereren</button>
+                    <button type="submit" class="btn btn-primary">Genereer een sleutelnummer</button>
                     @if (Session::has('success'))
                         <div>
                             {{ Session::get('success') }}
@@ -43,13 +43,13 @@
                     @endif
                 </form>
 
-                <h1>Sleutelnummer Invoeren</h1>
+                <h1>Bericht weergeven</h1>
                 <form action="{{ route('path') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <input type="text" name="path" placeholder="Sleutelnaam">
+                        <input type="text" name="path" placeholder="Voer hier de sleutelnummer">
                     </div>
-                    <button type="submit">Bericht Weergeven</button>
+                    <button type="submit">Bericht weergeven</button>
                 </form>
             </div>
         </div>
