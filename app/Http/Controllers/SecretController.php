@@ -32,9 +32,6 @@ class SecretController extends Controller
 //        $secret->delete();
 
         return view('secret', ['secret' => $secret->data]);
-//        Route::get('/user/{id}', function (Request $request, $id) {
-//            return 'User '.$id;
-//        });
     }
 
     public function navigate(Request $request)
